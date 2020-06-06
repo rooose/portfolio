@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Roboto+Slab&display=swap');
+
 .App {
   text-align: center;
 }
@@ -15,20 +17,55 @@
 
 .App-header {
   background-color: #FFD6BA;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(60px + 2vmin);
+  font-family:'Bentham', serif;
+  color: #555B6E;
+  font-style: italic;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000,
+               -5px 0px #555B6E,
+               -6px 1px #000000, -6px -1px #000000; */
 }
 
-@keyframes App-logo-spin {
+.Menu {
+  min-height: 10vh;
+  font-size: calc(8px + 2vmin);
+  font-family:'Bentham', serif;
+  background-color: #FFD6BA;
+  text-transform: lowercase;
+  color: #555B6E;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+ul#horizontal-list {
+	min-width: 90vw;
+  list-style: none;
+  color: #555B6E;
+  }
+
+	ul#horizontal-list li {
+		display: inline;
+  }
+  
+  ul#horizontal-list a {
+    color: #555B6E;
+    }
+
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
