@@ -1,56 +1,132 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
-import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
 
-function App() {
+// This site has 3 pages, all of which are rendered
+// dynamically in the browser (not server rendered).
+//
+// Although the page does not ever refresh, notice how
+// React Router keeps the URL up to date as you navigate
+// through the site. This preserves the browser history,
+// making sure things like the back button and bookmarks
+// work properly.
+
+export default function App() {
   return (
-    <div className="App">
-      <Router>
-        <header className="App-header">
-          <p>Juliette Hirigoyen</p>
-        </header>
+    <Router>
+            <div className="App">
+                <header className="App-header">
+                    <p>Juliette Hirigoyen</p>
+                </header>
+            </div>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">All</Link>
+          </li>
+          <li>
+            <Link to="/animations">Animations</Link>
+          </li>
+          <li>
+            <Link to="/characters">characters</Link>
+          </li>
+          <li>
+            <Link to="/environments">characters</Link>
+          </li>
+          <li>
+            <Link to="/projects">projects</Link>
+          </li>
+          <li>
+            <Link to="/sketches">sketches</Link>
+          </li>
+        </ul>
 
-        <div className="Menu">
-          <div class="table">
-            <ul id="horizontal-list">
-              <li><a href="/animation">Animation</a></li>
-              <li>  •  </li>
-              <li><a href="/characters">Characters</a></li>
-              <li>  •  </li>
-              <li><a href="/environments">Environments</a></li>
-              <li>  •  </li>
-              <li><a href="/projects">Project</a></li>
-              <li>  •  </li>
-              <li><a href="/sketches">Sketches</a></li>
-            </ul>
-          </div>
+        <hr />
+
+        {/*
+          A <Switch> looks through all its children <Route>
+          elements and renders the first one whose path
+          matches the current URL. Use a <Switch> any time
+          you have multiple routes, but you want only one
+          of them to render at a time
+        */}
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/animations">
+            <Animations />
+          </Route>
+          <Route path="/characters">
+            <Characters />
+          </Route>
+          <Route path="/environments">
+            <Environments />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/sketches">
+            <Sketches />
+          </Route>
+        </Switch>
       </div>
+    </Router>
+  );
+}
 
-        <Route path="/animation" component={IndexPage} />
-        <Route path="/characters" component={AboutPage} />
-        <Route path="/environments" component={IndexPage} />
-        <Route path="/projects" component={AboutPage} />
-        <Route path="/sketches" component={IndexPage} />
-      </Router>
+// You can think of these components as "pages"
+// in your app.
 
-
+function Home() {
+  return (
+    <div>
+      <h2>Show all art</h2>
     </div>
   );
 }
 
-
-const IndexPage = () => {
+function Animations() {
   return (
-    <p>Home Page</p>
+    <div>
+      <h2>Show animations</h2>
+    </div>
   );
-};
+}
 
-const AboutPage = () => {
+function Characters() {
   return (
-    <p>About Page</p>
+    <div>
+      <h2>Show characters</h2>
+    </div>
   );
-};
+}
 
+function Environments() {
+    return (
+      <div>
+        <h2>Show environments</h2>
+      </div>
+    );
+  }
 
-export default App;
+  function Projects() {
+    return (
+      <div>
+        <h2>Show projects</h2>
+      </div>
+    );
+  }
+
+  function Sketches() {
+    return (
+      <div>
+        <h2>Show Sketches</h2>
+      </div>
+    );
+  }

@@ -33,7 +33,7 @@
                -6px 1px #000000, -6px -1px #000000; */
 }
 
-.Menu {
+/* .Menu {
   min-height: 10vh;
   font-size: calc(8px + 2vmin);
   font-family:'Bentham', serif;
@@ -44,7 +44,7 @@
 
 .table {
 	display: table;   /* Allow the centering to work */
-	margin: 0 auto;
+	/*margin: 0 auto;
 }
 
 ul#horizontal-list {
@@ -59,7 +59,7 @@ ul#horizontal-list {
   
   ul#horizontal-list a {
     color: #555B6E;
-    }
+    } */
 
 /* @keyframes App-logo-spin {
   from {
