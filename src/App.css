@@ -4,19 +4,9 @@
   text-align: center;
 }
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
 .App-header {
   background-color: #FFD6BA;
+  text-align: center;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -33,39 +23,31 @@
                -6px 1px #000000, -6px -1px #000000; */
 }
 
-/* .Menu {
+.Menu {
   min-height: 10vh;
   font-size: calc(8px + 2vmin);
   font-family:'Bentham', serif;
   background-color: #FFD6BA;
   text-transform: lowercase;
   color: #555B6E;
+  text-align: center;
 }
 
 .table {
-	display: table;   /* Allow the centering to work */
-	/*margin: 0 auto;
+  display: table;   /* Allow the centering to work */
+  margin: 0 auto;
 }
 
 ul#horizontal-list {
-	min-width: 90vw;
+  min-width: 90vw;
   list-style: none;
   color: #555B6E;
   }
 
-	ul#horizontal-list li {
-		display: inline;
+  ul#horizontal-list li {
+    display: inline;
   }
   
   ul#horizontal-list a {
     color: #555B6E;
-    } */
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+    }
