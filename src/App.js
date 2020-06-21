@@ -6,8 +6,13 @@ import {
     Link
 } from "react-router-dom";
 import "./App.css";
-import jsonp from 'jsonp';
-import LightboxGallery from "./LightboxGallery";
+import Home from "./Home"
+import Animations from "./Animations"
+import Characters from "./Characters"
+import Environments from "./Environments"
+import Projects from "./Projects"
+import Sketches from "./Sketches"
+import imageLoader from "./images"
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -21,53 +26,11 @@ import LightboxGallery from "./LightboxGallery";
 class App extends React.Component {
     constructor() {
         super();
-        this.state = { width: -1 };
-        this.loadPhotos = this.loadPhotos.bind(this);
-    }
-    componentDidMount() {
-        this.loadPhotos();
-    }
-    loadPhotos() {
-        const urlParams = {
-            api_key: '455b5e2fa6b951f9b9ab58a86d5e1f8a',
-            photoset_id: '72157708141247864',
-            user_id: '146659101@N08',
-            format: 'json',
-            per_page: '120',
-            extras: 'url_m,url_c,url_l,url_h,url_o',
-        };
-
-        let url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos';
-        url = Object.keys(urlParams).reduce((acc, item) => {
-            return acc + '&' + item + '=' + urlParams[item];
-        }, url);
-
-        jsonp(url, { name: 'jsonFlickrApi' }, (err, data) => {
-            let photos = data.photoset.photo.map(item => {
-                let aspectRatio = parseFloat(item.width_o / item.height_o);
-                return {
-                    src: item.url_l,
-                    width: parseInt(item.width_o),
-                    height: parseInt(item.height_o),
-                    title: item.title,
-                    alt: item.title,
-                    key: item.id,
-                    srcSet: [
-                        `${item.url_m} ${item.width_m}w`,
-                        `${item.url_c} ${item.width_c}w`,
-                        `${item.url_l} ${item.width_l}w`,
-                        `${item.url_h} ${item.width_h}w`,
-                    ],
-                    sizes: '(min-width: 480px) 50vw, (min-width: 1024px) 33.3vw, 100vw',
-                };
-            });
-            this.setState({
-                photos: this.state.photos ? this.state.photos.concat(photos) : photos,
-            });
-        });
+        const photos = imageLoader()
+        this.state = { width: -1, photos: photos };
     }
     render() {
-        if (this.state.photos) {
+        if (this.state.photos && this.state.photos.length > 0) {
             return (
                 <Router>
                     <div className="App">
@@ -116,22 +79,22 @@ class App extends React.Component {
             */}
                         <Switch>
                             <Route exact path="/">
-                                <Home />
+                                <Home photos={this.state.photos}/>
                             </Route>
                             <Route path="/animations">
-                                <Animations />
+                                <Animations photos={this.state.photos}/>
                             </Route>
                             <Route path="/characters">
-                                <Characters />
+                                <Characters photos={this.state.photos}/>
                             </Route>
                             <Route path="/environments">
-                                <Environments />
+                                <Environments photos={this.state.photos}/>
                             </Route>
                             <Route path="/projects">
-                                <Projects />
+                                <Projects photos={this.state.photos}/>
                             </Route>
                             <Route path="/sketches">
-                                <Sketches />
+                                <Sketches photos={this.state.photos}/>
                             </Route>
                         </Switch>
                     </div>
@@ -143,51 +106,5 @@ class App extends React.Component {
 
 // You can think of these components as "pages"
 // in your app.
-
-function Home() {
-    return (
-        <LightboxGallery photos={this.state.photos.slice(60, 75)} />
-    );
-}
-
-function Animations() {
-    return (
-        <div>
-            <h2>Show animations</h2>
-        </div>
-    );
-}
-
-function Characters() {
-    return (
-        <div>
-            <h2>Show characters</h2>
-        </div>
-    );
-}
-
-function Environments() {
-    return (
-        <div>
-            <h2>Show environments</h2>
-        </div>
-    );
-}
-
-function Projects() {
-    return (
-        <div>
-            <h2>Show projects</h2>
-        </div>
-    );
-}
-
-function Sketches() {
-    return (
-        <div>
-            <h2>Show Sketches</h2>
-        </div>
-    );
-}
 
 export default App;
