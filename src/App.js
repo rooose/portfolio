@@ -12,7 +12,7 @@ import Characters from "./Characters"
 import Environments from "./Environments"
 import Projects from "./Projects"
 import Sketches from "./Sketches"
-import imageLoader from "./images"
+import imageLoader from "./imgTest"
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -55,7 +55,7 @@ class App extends React.Component {
                                     </li>
                                     <li>  •  </li>
                                     <li>
-                                        <Link to="/environments">characters</Link>
+                                        <Link to="/environments">environments</Link>
                                     </li>
                                     <li>  •  </li>
                                     <li>
@@ -79,22 +79,22 @@ class App extends React.Component {
             */}
                         <Switch>
                             <Route exact path="/">
-                                <Home photos={this.state.photos}/>
+                                <Home photos={this.state.photos} />
                             </Route>
                             <Route path="/animations">
-                                <Animations photos={this.state.photos}/>
+                                <Animations photos={this.state.photos.filter(e => e.type === "animation")} />
                             </Route>
                             <Route path="/characters">
-                                <Characters photos={this.state.photos}/>
+                                <Characters photos={this.state.photos.filter(e => e.type === "character")} />
                             </Route>
                             <Route path="/environments">
-                                <Environments photos={this.state.photos}/>
+                                <Environments photos={this.state.photos.filter(e => e.type === "environment")} />
                             </Route>
                             <Route path="/projects">
-                                <Projects photos={this.state.photos}/>
+                                <Projects photos={this.state.photos.filter(e => e.type === "project")} />
                             </Route>
                             <Route path="/sketches">
-                                <Sketches photos={this.state.photos}/>
+                                <Sketches photos={this.state.photos.filter(e => e.type === "sketch")} />
                             </Route>
                         </Switch>
                     </div>
