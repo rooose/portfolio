@@ -3,6 +3,7 @@ import React, { useState, useCallback } from 'react';
 import ReactDOM from 'react-dom';
 import Gallery from 'react-photo-gallery';
 import Carousel, { Modal, ModalGateway } from 'react-images';
+import "./Gallery.css"
 
 function LightboxGallery({ photos }) {
   const [currentImage, setCurrentImage] = useState(0);
