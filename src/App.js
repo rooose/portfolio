@@ -13,6 +13,8 @@ import Environments from "./Environments"
 import Projects from "./Projects"
 import Sketches from "./Sketches"
 import imageLoader from "./imgTest"
+import ScrollToTop from "./ScrollToTop"
+
 
 class App extends React.Component {
     constructor() {
@@ -24,6 +26,7 @@ class App extends React.Component {
         if (this.state.photos && this.state.photos.length > 0) {
             return (
                 <Router>
+                    <ScrollToTop>
                     <div className="App">
                         <header className="App-header">
                             <p>Juliette Hirigoyen</p>
@@ -88,6 +91,7 @@ class App extends React.Component {
                             </Route>
                         </Switch>
                     </div>
+                </ScrollToTop>
                 </Router>
 
             );
