@@ -21,7 +21,6 @@ function LightboxGallery({ photos }) {
 
   return (
     <div>
-      <h2>Using with a Lightbox component</h2>
       <Gallery photos={photos} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (

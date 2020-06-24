@@ -47,3 +47,7 @@ ul#horizontal-list {
   ul#horizontal-list li {
     display: inline;
   }
+
+.content {
+  min-height: 100vh;
+}
