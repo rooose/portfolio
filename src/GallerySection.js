@@ -2,7 +2,7 @@ import React from "react";
 import LightboxGallery from "./LightboxGallery";
 import "./App.css";
 
-class Projects extends React.Component {
+class GallerySection extends React.Component {
     render() {
         return (
             <div className="content">
@@ -12,4 +12,4 @@ class Projects extends React.Component {
     }
 }
 
-export default Projects;
+export default GallerySection;

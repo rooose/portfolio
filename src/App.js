@@ -6,13 +6,9 @@ import {
     Link
 } from "react-router-dom";
 import "./App.css";
-import Home from "./Home"
-import Animations from "./Animations"
-import Characters from "./Characters"
-import Environments from "./Environments"
-import Projects from "./Projects"
-import Sketches from "./Sketches"
-import imageLoader from "./imgTest"
+import Header from "./Header"
+import GallerySection from "./GallerySection"
+import imageLoader from "./images"
 import ScrollToTop from "./ScrollToTop"
 
 
@@ -27,42 +23,8 @@ class App extends React.Component {
             return (
                 <Router>
                     <ScrollToTop>
-                    <div className="App">
-                        <header className="App-header">
-                            <p>Juliette Hirigoyen</p>
-                        </header>
-                    </div>
-                    <div>
-                        <div className="Menu">
-                            <div className="table">
-                                <ul id="horizontal-list">
-                                    <li>
-                                        <Link to="/">All</Link>
-                                    </li>
-                                    <li>  •  </li>
-                                    <li>
-                                        <Link to="/animations">Animations</Link>
-                                    </li>
-                                    <li>  •  </li>
-                                    <li>
-                                        <Link to="/characters">characters</Link>
-                                    </li>
-                                    <li>  •  </li>
-                                    <li>
-                                        <Link to="/environments">environments</Link>
-                                    </li>
-                                    <li>  •  </li>
-                                    <li>
-                                        <Link to="/projects">projects</Link>
-                                    </li>
-                                    <li>  •  </li>
-                                    <li>
-                                        <Link to="/sketches">sketches</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
+                        <Header/>
+                        <div>
                         {/*
             A <Switch> looks through all its children <Route>
             elements and renders the first one whose path
@@ -72,22 +34,22 @@ class App extends React.Component {
             */}
                         <Switch>
                             <Route exact path="/">
-                                <Home photos={this.state.photos} />
+                                <GallerySection photos={this.state.photos} />
                             </Route>
                             <Route path="/animations">
-                                <Animations photos={this.state.photos.filter(e => e.type === "animation")} />
+                                <GallerySection photos={this.state.photos.filter(e => e.type === "animation")} />
                             </Route>
                             <Route path="/characters">
-                                <Characters photos={this.state.photos.filter(e => e.type === "character")} />
+                                <GallerySection photos={this.state.photos.filter(e => e.type === "character")} />
                             </Route>
                             <Route path="/environments">
-                                <Environments photos={this.state.photos.filter(e => e.type === "environment")} />
+                                <GallerySection photos={this.state.photos.filter(e => e.type === "environment")} />
                             </Route>
                             <Route path="/projects">
-                                <Projects photos={this.state.photos.filter(e => e.type === "project")} />
+                                <GallerySection photos={this.state.photos.filter(e => e.type === "project")} />
                             </Route>
                             <Route path="/sketches">
-                                <Sketches photos={this.state.photos.filter(e => e.type === "sketch")} />
+                                <GallerySection photos={this.state.photos.filter(e => e.type === "sketch")} />
                             </Route>
                         </Switch>
                     </div>
