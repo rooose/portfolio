@@ -34,7 +34,7 @@ class HamburgerMenu extends React.Component {
                         </a>
                     </li>
                     <li>
-                        <Link to="/files/JulietteHirigoyen_Resume.pdf" target="_blank" download className="nav-links">Resume</Link>
+                        <Link to={process.env.PUBLIC_URL + "/JulietteHirigoyen_Resume.pdf"} target="_blank" download className="nav-links">Resume</Link>
                     </li>
                 </ul>
                 </vnav>
