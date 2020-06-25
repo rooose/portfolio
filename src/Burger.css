@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Roboto+Slab&family=Oswald&display=swap');
+
+.top-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding-right: 3%;
+    padding-top: 1%;
+    border-color: red !important;
+}
+
+.hamburger-menu {
+    text-align: right;
+    /* padding-left: 10px; */
+}
+
+.hamburger-content {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.nav-links {
+    line-height: 7vmin;
+    font-size: 3vmin;
+    font-family:'Oswald', sans-serif;
+    color: #555B6E;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+/* --------------------------------- */
+  /* NAVIGATION */
+  vnav {
+    min-height: 10vh;
+    background-color: #FFD6BA;
+    /* background-image: linear-gradient(#FFD6BA, #FFD6BA, white, white); */
+    font-size: calc(8px + 2vmin);
+    font-family:'Bentham', serif;
+  }
+  
+  vnav ul {
+    list-style: none;
+    text-align: right;
+  }
+
+  vnav ul li a {
+    text-decoration: none;
+  }
+
+  vnav ul li a,
+  vnav ul li a:after,
+  vnav ul li a:before {
+    transition: all .5s;
+  }
+
+  vnav ul li a:hover {
+    color: palevioletred;
+    text-decoration: none;
+  }
+
+/* stroke */
+vnav.stroke ul li a,
+vnav.fill ul li a {
+  position: relative;
+}
+
+vnav.stroke ul li a:after,
+vnav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: palevioletred;
+  height: 1px;
+}
+
+vnav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+vnav.fill ul li a {
+  transition: all 2s;
+}
+
+vnav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+vnav.fill ul li a:hover {
+  color: #023f1c;
+  z-index: 1;
+}
+vnav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+

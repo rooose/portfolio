@@ -23,30 +23,9 @@
                -6px 1px #000000, -6px -1px #000000; */
 }
 
-.Menu {
-  min-height: 10vh;
-  font-size: calc(8px + 2vmin);
-  font-family:'Bentham', serif;
-  background-color: #FFD6BA;
-  text-transform: lowercase;
-  color: #555B6E;
-  text-align: center;
+.Header {
+  margin-bottom: 10px;
 }
-
-.table {
-  display: table;   /* Allow the centering to work */
-  margin: 0 auto;
-}
-
-ul#horizontal-list {
-  min-width: 90vw;
-  list-style: none;
-  color: #555B6E;
-  }
-
-  ul#horizontal-list li {
-    display: inline;
-  }
 
 .content {
   min-height: 100vh;

@@ -2,14 +2,14 @@ import React from "react";
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 import "./App.css";
 import Header from "./Header"
 import GallerySection from "./GallerySection"
 import imageLoader from "./images"
 import ScrollToTop from "./ScrollToTop"
+import Introduction from "./Introduction"
 
 
 class App extends React.Component {
@@ -50,6 +50,9 @@ class App extends React.Component {
                             </Route>
                             <Route path="/sketches">
                                 <GallerySection photos={this.state.photos.filter(e => e.type === "sketch")} />
+                            </Route>
+                            <Route path="/introduction">
+                                <Introduction/>
                             </Route>
                         </Switch>
                     </div>
