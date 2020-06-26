@@ -24,14 +24,14 @@ class HamburgerMenu extends React.Component {
                 <vnav class="stroke">
                 <ul className={this.state.active ? 'hamburger-content active' : 'hamburger-content'}>
                     <li>
-                        <a href='/' className='nav-links'>
+                        <Link to='/portfolio/' className='nav-links'>
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href='/introduction' className='nav-links'>
+                        <Link to='/portfolio/introduction' className='nav-links'>
                             About Me
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <Link to={process.env.PUBLIC_URL + "/JulietteHirigoyen_Resume.pdf"} target="_blank" download className="nav-links">Resume</Link>

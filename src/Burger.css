@@ -11,7 +11,6 @@
 
 .hamburger-menu {
     text-align: right;
-    /* padding-left: 10px; */
 }
 
 .hamburger-content {
@@ -34,7 +33,7 @@
   /* NAVIGATION */
   vnav {
     min-height: 10vh;
-    background-color: #FFD6BA;
+    /* background-color: #FFD6BA; */
     /* background-image: linear-gradient(#FFD6BA, #FFD6BA, white, white); */
     font-size: calc(8px + 2vmin);
     font-family:'Bentham', serif;

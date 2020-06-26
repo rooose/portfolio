@@ -17,22 +17,22 @@ class Header extends React.Component {
                 <nav class="stroke">
                     <ul id="horizontal-list">
                         <li>
-                            <Link to="/">All</Link>
+                            <Link to="/portfolio/">All</Link>
                         </li>
                         <li>
-                            <Link to="/animations">animations</Link>
+                            <Link to="/portfolio/animations">animations</Link>
                         </li>
                         <li>
-                            <Link to="/characters">characters</Link>
+                            <Link to="/portfolio/characters">characters</Link>
                         </li>
                         <li>
-                            <Link to="/environments">environments</Link>
+                            <Link to="/portfolio/environments">environments</Link>
                         </li>
                         <li>
-                            <Link to="/projects">projects</Link>
+                            <Link to="/portfolio/projects">projects</Link>
                         </li>
                         <li>
-                            <Link to="/sketches">sketches</Link>
+                            <Link to="/portfolio/sketches">sketches</Link>
                         </li>
                     </ul>
                 </nav>

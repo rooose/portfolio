@@ -6,15 +6,16 @@
   /* NAVIGATION */
   nav {
     min-height: 10vh;
-    background-color: #FFD6BA;
     /* background-image: linear-gradient(#FFD6BA, #FFD6BA, white, white); */
     font-size: calc(8px + 2vmin);
     font-family:'Bentham', serif;
   }
-  
+
   nav ul {
     list-style: none;
     text-align: center;
+    background-color: #FFD6BA;
+    min-height: 10vh;
   }
   nav ul li {
     display: inline-block;

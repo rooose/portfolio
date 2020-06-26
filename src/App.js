@@ -33,25 +33,25 @@ class App extends React.Component {
             of them to render at a time
             */}
                         <Switch>
-                            <Route exact path="/">
+                            <Route exact path="/portfolio/">
                                 <GallerySection photos={this.state.photos} />
                             </Route>
-                            <Route path="/animations">
+                            <Route path="/portfolio/animations">
                                 <GallerySection photos={this.state.photos.filter(e => e.type === "animation")} />
                             </Route>
-                            <Route path="/characters">
+                            <Route path="/portfolio/characters">
                                 <GallerySection photos={this.state.photos.filter(e => e.type === "character")} />
                             </Route>
-                            <Route path="/environments">
+                            <Route path="/portfolio/environments">
                                 <GallerySection photos={this.state.photos.filter(e => e.type === "environment")} />
                             </Route>
-                            <Route path="/projects">
+                            <Route path="/portfolio/projects">
                                 <GallerySection photos={this.state.photos.filter(e => e.type === "project")} />
                             </Route>
-                            <Route path="/sketches">
+                            <Route path="/portfolio/sketches">
                                 <GallerySection photos={this.state.photos.filter(e => e.type === "sketch")} />
                             </Route>
-                            <Route path="/introduction">
+                            <Route path="/portfolio/introduction">
                                 <Introduction/>
                             </Route>
                         </Switch>
