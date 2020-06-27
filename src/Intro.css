@@ -1,0 +1,84 @@
+.left-column {
+    float: left;
+    width: 35%;
+    margin-right: 100px;
+}
+
+.right-column {
+    float: left;
+    width: 65%;
+}
+
+.single-row {
+    min-height: 76vh;
+}
+
+.single-row:after {
+    display: table;
+    clear: both;
+}
+
+.selfie {
+    max-width: 80%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+.intro {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+.title {
+    font-size: 10vh;
+    font-family: 'Oswald', sans-serif;
+    line-height: 20vh;
+}
+
+.title span {
+    color: white;
+    background-color: #ffbac1;
+}
+
+.about-me{
+    font-size: 2.5vh;
+    line-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
+.border {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	background-color: #FFD6BA;
+	background-image: linear-gradient(19deg, #ffbac1 0%, #FFD6BA 100%);
+	border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+	box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+	animation: morphing 10s infinite;
+	overflow: hidden;
+}
+
+	@keyframes morphing {
+		0% {
+			border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+			box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+		}
+		25% { 
+			border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+		}
+		50% {
+			border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+			box-shadow: -10px -5px 50px rgba(0,0,0,0.2);
+		}
+		75% {
+			border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+		}
+}

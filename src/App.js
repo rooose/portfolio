@@ -10,6 +10,7 @@ import GallerySection from "./GallerySection"
 import imageLoader from "./images"
 import ScrollToTop from "./ScrollToTop"
 import Introduction from "./Introduction"
+import Footer from "./Footer"
 
 
 class App extends React.Component {
@@ -56,6 +57,7 @@ class App extends React.Component {
                             </Route>
                         </Switch>
                     </div>
+                    <Footer/>
                 </ScrollToTop>
                 </Router>
 

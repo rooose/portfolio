@@ -10,7 +10,7 @@ body {
   
   small {
     font-size: calc(8px + 2vmin);
-    color: #555B6E;
+    color: #565656;
 }
 
   .center {
@@ -34,7 +34,7 @@ body {
     padding: 15px;
     padding-bottom: 2px;
     text-decoration: none;
-    color: #555B6E;
+    color: #565656;
     font-weight: 400;
     text-transform: lowercase;
     margin: 0 10px;
@@ -45,7 +45,7 @@ body {
     transition: all .5s;
   }
   nav ul li a:hover {
-    color: #555B6E;
+    color: #565656;
   }
   
   
@@ -64,7 +64,7 @@ body {
     width: 0%;
     content: '.';
     color: transparent;
-    background: #555B6E;
+    background: #565656;
     height: 1px;
   }
   nav.stroke ul li a:hover:after {

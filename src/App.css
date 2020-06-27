@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Montserrat&family=Roboto+Slab&display=swap');
 
 .App {
   text-align: center;
@@ -14,12 +14,12 @@
   justify-content: center;
   font-size: calc(60px + 2vmin);
   font-family:'Bentham', serif;
-  color: #555B6E;
+  color: #565656;
   font-style: italic;
   font-weight: bold;
   text-transform: uppercase;
   /* text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000,
-               -5px 0px #555B6E,
+               -5px 0px #565656,
                -6px 1px #000000, -6px -1px #000000; */
 }
 
@@ -28,5 +28,7 @@
 }
 
 .content {
-  min-height: 100vh;
+  min-height: 87vh;
+  max-width: 95vw;
+  margin: 0 auto;
 }

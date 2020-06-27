@@ -18,7 +18,7 @@ class HamburgerMenu extends React.Component {
                     onClick={this.toggleNavbar}
                     active={this.state.active}
                     burger="squeeze"
-                    color=" #555B6E"
+                    color=" #565656"
                     hoverOpacity={0.8}
                 />
                 <vnav class="stroke">
